@@ -87,12 +87,12 @@ class App extends Component {
 
     const sortedRepos = filteredRepos.sort((a, b) => {
       if (this.state.ascOrDesc) {
-        if (a[this.state.sortBy] < b[this.state.sortBy]) return -1;
-        if (a[this.state.sortBy] > b[this.state.sortBy]) return 1;
-        else return 0;
-      } else {
         if (a[this.state.sortBy] < b[this.state.sortBy]) return 1;
         if (a[this.state.sortBy] > b[this.state.sortBy]) return -1;
+        else return 0;
+      } else {
+        if (a[this.state.sortBy] < b[this.state.sortBy]) return -1;
+        if (a[this.state.sortBy] > b[this.state.sortBy]) return 1;
         else return 0;
       }
     });
