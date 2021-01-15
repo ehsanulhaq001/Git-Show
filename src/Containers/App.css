@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Monoton&display=swap');
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    box-shadow: 0 0 10px white;
+    backdrop-filter: blur(10px);
+}
+
+#title {
+    font-family: 'Monoton', cursive;
+    letter-spacing: 0.6rem;
+}
+
+#cardsHolder {
+    margin-top: 10vh;
+}
+
+@media only screen and (max-width:1000px) {
+    #cardsHolder {
+        margin-top: 0vh;
+    }
+}
+
+#searchInput {
+    background-color: transparent;
+    color: white;
+}
+
+.navItems:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.2)!important;
+    backdrop-filter: blur(5px);
+}
+
+.navDropdownItem {
+    color: white!important;
+}
+
+.navDropdownItem:active {
+    color: white!important;
+}
+
+.navDropdownItem:hover {
+    background-color: rgba(0, 0, 0, 0.5)!important;
+}
+
+#searchInput:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+footer>div {
+    display: inline-block;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: fit-content;
+    bottom: 0%;
+}
+
+.custom-icon {
+    margin: 0 10px;
+}
