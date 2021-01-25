@@ -10,8 +10,15 @@ import {
 } from "react-bootstrap";
 import Cards from "../Components/Cards/Cards.js";
 import Scroll from "../Components/Scroll.js";
+import Light from "../images/light.jpg";
+import Dark from "../images/dark.jpg";
 
 const excludeTheseRepos = ["Bounce", "ehsanulhaq001", "start-here-guidelines"];
+
+document.documentElement.style.setProperty(
+  "--vh",
+  `${window.innerHeight * 0.01}px`
+);
 
 class App extends Component {
   constructor() {
@@ -21,6 +28,7 @@ class App extends Component {
       searchfield: "",
       sortBy: "created_at",
       ascOrDesc: 1,
+      lightOrDark: 0,
     };
   }
   componentDidMount() {
@@ -56,15 +64,37 @@ class App extends Component {
 
   //called whenever a sort-order is clicked
 
-  onSortMehodChange = (event) => {
-    this.setState({
-      sortBy: event.target.innerHTML,
-    });
+  onSortMehodChange = (i) => {
+    switch (i) {
+      case 1:
+        this.setState({
+          sortBy: "created_at",
+        });
+        break;
+      case 2:
+        this.setState({
+          sortBy: "updated_at",
+        });
+        break;
+      case 3:
+        this.setState({
+          sortBy: "size",
+        });
+        break;
+      default:
+        break;
+    }
   };
 
   onSortChange = () => {
     this.setState({
       ascOrDesc: !this.state.ascOrDesc,
+    });
+  };
+
+  onBgChange = () => {
+    this.setState({
+      lightOrDark: !this.state.lightOrDark,
     });
   };
 
@@ -97,56 +127,56 @@ class App extends Component {
       }
     });
 
+    const url = this.state.lightOrDark ? Light : Dark;
+
+    const theme = {
+      backgroundImage: `url(${url})`,
+    };
+
     return (
-      <div className="App">
+      <div className="App" style={theme}>
         <header>
           <Navbar
             bg="light"
-            className="navbar-dark  bg-transparent"
+            className={
+              this.state.lightOrDark
+                ? "navbar-light  bg-transparent"
+                : "navbar-dark  bg-transparent"
+            }
             expand="lg"
           >
-            <Navbar.Brand id="title" href="#home">
-              Ehsan ul haq Khawja
-            </Navbar.Brand>
+            <Navbar.Brand id="title">Git Show</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <NavDropdown
-                  className="navItems navDropdown asdf"
-                  title="Sort By"
-                  id="basic-nav-dropdown"
-                >
+                <NavDropdown className="navItems navDropdown" title="Sort By">
                   <NavDropdown.Item
                     className="navDropdownItem"
-                    href="#/"
-                    onClick={this.onSortMehodChange}
+                    onClick={() => this.onSortMehodChange(1)}
                   >
-                    created_at
+                    Date Created
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="navDropdownItem"
-                    href="#/"
-                    onClick={this.onSortMehodChange}
+                    onClick={() => this.onSortMehodChange(2)}
                   >
-                    updated_at
+                    Date Updated
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="navDropdownItem"
-                    href="#/"
-                    onClick={this.onSortMehodChange}
+                    onClick={() => this.onSortMehodChange(3)}
                   >
-                    size
+                    Size
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link className="navItems disabled" href="#link">
+                <Nav.Link className="navItems disabled">
                   {this.getSortInfo()}
                 </Nav.Link>
-                <Nav.Link
-                  className="navItems"
-                  href="#link"
-                  onClick={this.onSortChange}
-                >
+                <Nav.Link className="navItems" onClick={this.onSortChange}>
                   {this.state.ascOrDesc ? "Desc" : "Asc"}
+                </Nav.Link>
+                <Nav.Link className="navItems" onClick={this.onBgChange}>
+                  {this.state.lightOrDark ? "Light" : "Dark"}
                 </Nav.Link>
               </Nav>
               <Form inline>

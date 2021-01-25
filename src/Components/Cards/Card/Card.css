@@ -18,6 +18,15 @@
     transition: backdrop-filter 1000ms;
 }
 
+.liveDemoBtn {
+    background-color: #c7c6c7!important;
+    border: 1px solid rgb(118 129 183)!important;
+}
+
+.liveDemoBtn:hover {
+    background-color: #7e808c!important;
+}
+
 #card:hover>.cardBody {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);

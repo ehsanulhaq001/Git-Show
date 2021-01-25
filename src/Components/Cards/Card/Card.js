@@ -23,6 +23,7 @@ function Cards(props) {
             target="_blank"
             rel="noopener noreferrer"
             variant="primary"
+            className="liveDemoBtn"
           >
             Live Demo
           </Button>
