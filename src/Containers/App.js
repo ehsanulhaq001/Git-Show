@@ -13,7 +13,12 @@ import Scroll from "../Components/Scroll.js";
 import Light from "../images/light.jpg";
 import Dark from "../images/dark.jpg";
 
-const excludeTheseRepos = ["Bounce", "ehsanulhaq001", "start-here-guidelines"];
+const excludeTheseRepos = [
+  "Bounce",
+  "ehsanulhaq001",
+  "start-here-guidelines",
+  "ehsanulhaq001.github.io",
+];
 
 document.documentElement.style.setProperty(
   "--vh",
