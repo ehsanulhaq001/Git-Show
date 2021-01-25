@@ -189,7 +189,12 @@ class App extends Component {
                   type="text"
                   placeholder="Search Repositories"
                   id="searchInput"
-                  className="mr-sm-2 "
+                  className="mr-sm-2"
+                  style={{
+                    color: this.state.lightOrDark
+                      ? "rgba(0, 0, 0, 0.7)"
+                      : "white",
+                  }}
                   onChange={this.onSearchChange}
                 />
                 <Button variant="outline-success">Search</Button>
@@ -199,7 +204,7 @@ class App extends Component {
         </header>
         <div id="cardsHolder">
           <Scroll>
-            <Cards repos={sortedRepos}></Cards>
+            <Cards repos={sortedRepos} theme={this.state.lightOrDark}></Cards>
           </Scroll>
         </div>
         <footer>

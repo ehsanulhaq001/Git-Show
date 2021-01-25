@@ -36,7 +36,10 @@ header {
 
 #searchInput {
     background-color: transparent;
-    color: white;
+}
+
+#searchInput::placeholder {
+    color: rgba(48, 55, 65, 0.5);
 }
 
 .navItems:hover {
