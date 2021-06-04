@@ -14,9 +14,11 @@ body {
 }
 
 header {
+    position: relative;
     box-shadow: 0 0 10px white;
     backdrop-filter: blur(10px);
     background-color: rgb(155 162 187 / 38%);
+    z-index: 9999;
 }
 
 #title {
@@ -52,6 +54,7 @@ header {
 }
 
 .navDropdownItem {
+    z-index: 9999;
     color: white!important;
 }
 
