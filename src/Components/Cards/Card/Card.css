@@ -15,7 +15,7 @@
 }
 
 .cardBody {
-    transition: backdrop-filter 1000ms;
+    transition: background-color 1000ms;
 }
 
 .liveDemoBtn {
@@ -28,8 +28,7 @@
 }
 
 #card:hover>.cardBody {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: #718093;
 }
 
 @media only screen and (max-width:720px) {

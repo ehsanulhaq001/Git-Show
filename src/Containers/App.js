@@ -181,7 +181,7 @@ class App extends Component {
                   {this.state.ascOrDesc ? "Desc" : "Asc"}
                 </Nav.Link>
                 <Nav.Link className="navItems" onClick={this.onBgChange}>
-                  {this.state.lightOrDark ? "Light" : "Dark"}
+                  {this.state.lightOrDark ? "Dark" : "Light"}
                 </Nav.Link>
               </Nav>
               <Form inline>
