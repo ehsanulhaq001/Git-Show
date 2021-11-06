@@ -18,12 +18,23 @@ function Cards(props) {
         <Card.Body
           className="cardBody"
           style={{
+            padding: 8,
             color: theme ? "rgba(0, 0, 0, 0.7)" : "white",
           }}
         >
-          <Card.Title>{repo.name}</Card.Title>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              color: theme ? "rgba(0, 0, 0, 0.7)" : "white",
+            }}
+          >
+            {repo.name}
+          </a>
           {/* <Card.Text>{repo.description ? repo.description : "none"}</Card.Text> */}
-          <Button
+          {/* <Button
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -34,7 +45,7 @@ function Cards(props) {
             }}
           >
             Live Demo
-          </Button>
+          </Button> */}
         </Card.Body>
       </Card>
     </>
