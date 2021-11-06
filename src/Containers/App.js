@@ -133,21 +133,23 @@ class App extends Component {
     });
 
     const url = this.state.lightOrDark ? Light : Dark;
-
+    const bgColor = this.state.lightOrDark ? "white" : "#18191a";
     const theme = {
       backgroundImage: `url(${url})`,
+      backgroundColor: bgColor,
+      fontWeight: "bold",
     };
 
     return (
       <div className="App" style={theme}>
-        <header>
+        <header
+          style={{
+            backgroundColor: this.state.lightOrDark ? "#f2f2f2" : "#242526",
+          }}
+        >
           <Navbar
-            bg="light"
-            className={
-              this.state.lightOrDark
-                ? "navbar-light  bg-transparent"
-                : "navbar-dark  bg-transparent"
-            }
+            // bg="#20232a"
+            className={this.state.lightOrDark ? "navbar-light" : "navbar-dark"}
             expand="lg"
           >
             <Navbar.Brand id="title">Git Show</Navbar.Brand>
@@ -193,11 +195,10 @@ class App extends Component {
                   style={{
                     color: this.state.lightOrDark
                       ? "rgba(0, 0, 0, 0.7)"
-                      : "white",
+                      : "#02d3ac",
                   }}
                   onChange={this.onSearchChange}
                 />
-                <Button variant="outline-success">Search</Button>
               </Form>
             </Navbar.Collapse>
           </Navbar>
