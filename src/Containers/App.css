@@ -92,7 +92,7 @@ footer>div {
     display: inline-block;
     padding: 10px;
     backdrop-filter: blur(10px);
-    background-color: #242526;
+    /* background-color: #242526; */
     border-radius: 10px;
     width: fit-content;
     bottom: 0%;
