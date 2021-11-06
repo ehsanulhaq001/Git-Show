@@ -6,7 +6,7 @@ class Scroll extends Component {
       <div
         style={{
           overflow: "scroll",
-          height: `${(window.innerHeight / 100) * 80}px`,
+          height: `${(window.innerHeight / 100) * 85}px`,
         }}
       >
         {this.props.children}
