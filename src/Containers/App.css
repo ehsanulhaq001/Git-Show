@@ -14,6 +14,7 @@ body {
 }
 
 #title {
+    font-size: 1.5em;
     font-weight: 100;
     color: #02d3ac!important;
 }
@@ -51,7 +52,8 @@ header {
 }
 
 #searchInput::placeholder {
-    color: #02d3ac73;
+    /* color: #02d3ac73; */
+    color: #099e83;
 }
 
 .navItems:hover {
