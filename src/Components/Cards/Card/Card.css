@@ -28,7 +28,7 @@
 }
 
 #card:hover>.cardBody {
-    background-color: #242526;
+    background-color: #6e7277;
 }
 
 @media only screen and (max-width:720px) {
