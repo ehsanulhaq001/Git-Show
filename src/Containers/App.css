@@ -13,11 +13,15 @@ body {
     background-size: cover;
 }
 
+#title {
+    font-weight: 100;
+    color: #02d3ac!important;
+}
+
 header {
     position: relative;
-    box-shadow: 0 0 10px white;
+    /* box-shadow: 0 0 10px white; */
     backdrop-filter: blur(10px);
-    background-color: rgb(155 162 187 / 38%);
     z-index: 9999;
 }
 
@@ -26,8 +30,13 @@ header {
     letter-spacing: 0.6rem;
 }
 
+#themeToggle {
+    display: flex;
+    flex-direction: row;
+}
+
 #cardsHolder {
-    margin-top: 5vh;
+    margin-top: 0vh;
 }
 
 @media only screen and (max-width:1000px) {
@@ -38,10 +47,11 @@ header {
 
 #searchInput {
     background-color: transparent;
+    text-align: center;
 }
 
 #searchInput::placeholder {
-    color: rgba(48, 55, 65, 0.5);
+    color: #02d3ac73;
 }
 
 .navItems:hover {
@@ -55,11 +65,11 @@ header {
 
 .navDropdownItem {
     z-index: 9999;
-    color: white!important;
+    /* color: white!important; */
 }
 
 .navDropdownItem:active {
-    color: white!important;
+    /* color: white!important; */
 }
 
 .navDropdownItem:hover {
@@ -82,6 +92,7 @@ footer>div {
     display: inline-block;
     padding: 10px;
     backdrop-filter: blur(10px);
+    background-color: #242526;
     border-radius: 10px;
     width: fit-content;
     bottom: 0%;

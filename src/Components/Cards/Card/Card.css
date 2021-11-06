@@ -1,5 +1,5 @@
 #card {
-    margin: 10px;
+    margin: 40px;
     display: inline-block;
     background: transparent;
     color: white;
@@ -28,7 +28,7 @@
 }
 
 #card:hover>.cardBody {
-    background-color: #718093;
+    background-color: #242526;
 }
 
 @media only screen and (max-width:720px) {
