@@ -32,7 +32,7 @@ class App extends Component {
   componentDidMount() {
     //get public repositories
 
-    fetch("https://api.github.com/users/ehsanulhaq001/repos")
+    fetch("https://api.github.com/users/ehsanulhaq001/repos?per_page=100")
       .then((response) => response.json())
 
       //filter unwanted repos from array
