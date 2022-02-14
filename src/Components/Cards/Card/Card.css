@@ -18,6 +18,11 @@
     transition: background-color 1000ms;
 }
 
+.cardBody a {
+    display: block;
+    width: 100%;
+}
+
 .liveDemoBtn {
     background-color: #c7c6c7!important;
     border: 1px solid rgb(118 129 183)!important;
